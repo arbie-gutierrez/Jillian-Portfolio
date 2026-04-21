@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jillian Gail - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0a0e27;
+            color: white;
+            line-height: 1.6;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #141a3a;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8a2be2;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 80vh;
+            display: none; /* HIDE ALL */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #8a2be2;
+        }
+        /* HOME */
+        .home-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            background: #141a3a;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .home-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .home-text h1 span {
+            color: #8a2be2;
+        }
+        .home-img img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #8a2be2;
+        }
+        /* ABOUT */
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background: #141a3a;
+            padding: 2rem;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+        .about-img img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #8a2be2;
+        }
+        .about-text {
+            flex: 1;
+            text-align: justify;
+        }
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #141a3a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .project-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        /* CONTACT */
+        .contact-content {
+            background: #141a3a;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .social-links a {
+            font-size: 2rem;
+            margin: 0 0.5rem;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #141a3a;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">My Journey</div>
+        <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('contacts')">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h1>Hi I'm <span>Jillian Gail</span><br>Pose</h1>
+                <p>Welcome to my portfolio - a glimpse into my journey as a Computer Engineering student. Here, I share the pieces I'm exploring, the skills I'm building, and the progress I'm making along the way.</p>
+            </div>
+            <div class="home-img">
+                <img src="images/profile.jpg" alt="Jillian Gail">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="images/about.jpg" alt="Jillian Gail">
+            </div>
+            <div class="about-text">
+                <p>I'm <strong>Jillian Gail Z. Pose</strong>, a 2nd-year Computer Engineering student at Batangas State University - Lipa Campus. I'm still exploring the field but I'm genuinely eager to learn more — from hardware fundamentals to software development. My academic journey allows me to experiment with different areas of computing, while building practical skills in web design, development, and technology. I am eager to expand my technical knowledge and hands-on experiences that will prepare me for future projects and opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS PAGE -->
+    <section id="projects">
+        <h2>My Project</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Tour Package Presentation</h3>
+                <img src="images/project1.jpg" alt="Tour Package">
+                <p>I designed a tour package presentation and created files for Tanay, Rizal. This project enhanced my creativity and layout design while also improving my public communication skills by presenting information clearly and engagingly. It reflects my experience in design communication and how technical and creative skills can work together.</p>
+            </div>
+            <div class="project-card">
+                <h3>Emblem Expedition Game</h3>
+                <img src="images/project2.jpg" alt="Game Project">
+                <p>Together with my team, we developed a text-based game in C++ that applied programming logic, menu systems, and interactive game design. The project challenged us to make the code efficient, handle user inputs, and store branching storylines that keep the gameplay engaging. We implemented mechanisms like score systems and features that required players to think critically.</p>
+            </div>
+            <div class="project-card">
+                <h3>Electric Circuit Design</h3>
+                <img src="images/project3.jpg" alt="Circuit Project">
+                <p>We built and tested an electronic circuit using a breadboard with components like resistors and LEDs. This project gave us hands-on experience in connecting wires, resistors, and LEDs through a simple circuit design. It also involved proper troubleshooting to ensure the circuit worked properly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contacts">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <h3>Let's connect and collaborate!</h3>
+            <div class="contact-info">
+                <p>📞 09164648633</p>
+                <p>📧 jillianlgail@gmail.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">🎵</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Jillian Gail Pose - My Journey. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        // Show Home first
+        document.getElementById('home').style.display = 'block';
+
+        function showPage(pageId) {
+            // Hide all sections
+            const pages = document.querySelectorAll('section');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Show only the clicked one
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
