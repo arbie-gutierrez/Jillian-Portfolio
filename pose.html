@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jillian Gail - Portfolio</title>
+
+    <link rel="stylesheet" href="jill.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">My Journey</div>
+        <ul>
+            <li><a class="active" onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('contacts')">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="about-content">
+            <div class="about-text">
+                <h1>Hi I'm <span>Jillian Gail</span><br>Pose</h1>
+                <p>Welcome to my portfolio — a glimpse into my journey as a Computer Engineering student. Here, I share the pieces I’m exploring, the skills I’m building, and the progress I’m making along the way.</p>
+            </div>
+            <div class="home-img">
+                <img src="profile.jpg" alt="Jillian Gail">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I’m Jillian Gail Z. Pose, a 2nd-year Computer Engineering student at Batangas State University – Lipa Campus. I’m still exploring the field, but I’m genuinely eager to learn more — from hardware fundamentals to software development. My academic journey allows me to experiment with different areas of computing, while building practical skills in web design, development, and system workflows. I aim to grow step by step, gaining both technical knowledge and hands-on experience that will prepare me for future projects and opportunities.</p>
+            </div>
+            <div class="about-img">
+                <img src="profile.jpg" alt="Jillian Gail">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Project</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Tour Package Presentation</h3>
+                <img src="tour.jpg" alt="Tour Package">
+                <p>I designed a tour package presentation and created fliers for Tanay, Rizal. This project allowed me to enhance my creativity through visual design and layout, while also improving my public communication skills by presenting information clearly and engagingly. It reflects my eagerness to explore different field from design to communication and my commitment to learning how technical and creative skills can work together .</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Emblem Expedition Game</h3>
+                <img src="emblem.jpg" alt="Game Project">
+                <p>Together with my team, we developed a text-based game in C++ that applied programming logic, menu systems, and interactive gameplay design. The project challenged us to structure the code efficiently, handle user inputs, and create branching storylines that kept the gameplay engaging. We implemented features such as decision-based menus, score tracking, and simple mechanics that required players to think critically.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Electric Circuit Design</h3>
+                <img src="electric.jpg" alt="Circuit Project">
+                <p>We built and tested an electronic circuit using a breadboard, with the goal of making the components light up. This project gave us hands-on experience in connecting wires, resistors, and LEDs, while learning how current flows through a simple circuit. It required careful assembly and troubleshooting to ensure the circuit worked properly.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <h3>Let's connect and collaborate!</h3>
+            <div class="contact-info">
+                <p>📞 09656756652</p>
+                <p>📧 jilliangailp@gmail.com</p>
+            </div>
+            <div class="social-links">
+                        <a href="https://www.facebook.com/xoxo.jilx" target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:32px;height:32px;">
+                        </a>
+                        <a href="https://www.instagram.com/xoxo.jilxn/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:32px;height:32px;">
+                        </a>
+                        <a href="https://www.tiktok.com/@xoxo_jilxn?lang=en" target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok" style="width:32px;height:32px;">
+                        </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Jillian Gail Pose - My Journey. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('home').style.display = 'block';
+
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('section');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+
+            document.getElementById(pageId).style.display = 'block';
+
+            // Move active class to the clicked nav tab
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            // Find the nav link that matches the pageId
+            navLinks.forEach(link => {
+                // Extract the argument from onclick="showPage('...')"
+                const onclickAttr = link.getAttribute('onclick');
+                if (onclickAttr && onclickAttr.includes(`showPage('${pageId}')`)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
