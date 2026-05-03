@@ -1,3 +1,40 @@
+
+.white-initial {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important; 
+    font-weight: bold;
+    display: inline;
+}
+.intro-gradient {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #60A5FA;
+}   
+.name-highlight {
+    font-size: 1.3em; 
+    font-weight: bold;
+
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.gradient-initial {
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    display: inline;
+}
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +54,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
+
+
+.gradient-text {
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
 
 .logo {
     font-size: 1.5rem;
@@ -72,29 +125,53 @@ nav a:hover:not(.active)::after {
     transform: scaleX(1);
 }
 
-
 nav a:hover::after,
 nav a.active::after {
     transform: scaleX(1);
 }
-
 
 section {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
     min-height: 80vh;
-    display: none;
+    display: block;
+    padding-top: 5.5rem;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
-    background: linear-gradient(to right, blue, violet);
+    font-weight: bold;
+}
+
+
+
+
+
+.about-content .about-text h1 {
+    font-size: 3rem; 
+    font-weight: bold;
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+
+.section-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #4b6cb7, #8f6ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .home-content {
@@ -106,17 +183,6 @@ h2 {
     background: #141a3a;
     padding: 2rem;
     border-radius: 8px;
-}
-
-.about-content .about-text h1,
-#home .about-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(to right, blue, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
 }
 
 .home-img img {
@@ -168,6 +234,10 @@ h2 {
     border-radius: 4px;
 }
 
+.project-card h3 {
+    color: #60A5FA;
+}
+
 .contact-content {
     background: #141a3a;
     padding: 2.5rem 2rem;
@@ -182,7 +252,11 @@ h2 {
 #contacts h3 {
     font-size: 2rem;
     font-weight: 600;
-    color:linear-gradient(to right, blue, violet);;
+    background: linear-gradient(to right, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     line-height: 1.2;
     max-width: 780px;
 }
@@ -209,11 +283,6 @@ h2 {
     gap: 0.75rem;
 }
 
-.contact-info p::before {
-    content: '';
-    width: 0;
-}
-
 .social-links {
     display: flex;
     align-items: center;
@@ -238,17 +307,22 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px;
     color: white;
     text-decoration: none;
     font-size: 1.45rem;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #222b4a;
+    box-shadow: none;
+    border: 1.5px solid #222b4a;
+    transition: transform 0.25s, box-shadow 0.25s, border 0.2s;
+    padding: 0;
 }
 
+
+/* White text for initials */
 .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px) scale(1.05);
+    border: 1.5px solid #60A5FA;
 }
 
 .social-links a:nth-child(1) {
@@ -279,9 +353,4 @@ footer {
     .contact-info p {
         justify-content: center;
     }
-
-    .social-links {
-        flex-wrap: wrap;
-    }
 }
-

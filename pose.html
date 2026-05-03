@@ -13,18 +13,24 @@
     <nav>
         <div class="logo">My Journey</div>
         <ul>
-            <li><a class="active" onclick="showPage('home')">Home</a></li>
-            <li><a onclick="showPage('about')">About</a></li>
-            <li><a onclick="showPage('projects')">Projects</a></li>
-            <li><a onclick="showPage('contacts')">Contacts</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <div class="about-content">
             <div class="about-text">
-                <h1>Hi I'm <span>Jillian Gail</span><br>Pose</h1>
-                <p>Welcome to my portfolio — a glimpse into my journey as a Computer Engineering student. Here, I share the pieces I’m exploring, the skills I’m building, and the progress I’m making along the way.</p>
+                                <p class="intro-gradient">Welcome to my Journey</p>  
+                                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <h1 style="margin-bottom: 0; text-align: left;">
+                                        <span class="white-initial">Hi I’m </span><span class="gradient-initial">Jillian Gail</span>
+                                    </h1>
+                                    <span style="color: #6c63ff; font-size: 2.5rem; font-weight: bold; letter-spacing: 2px; line-height: 1; text-align: left; display: block;">Pose</span>
+                                </div>
+                                <p>Welcome to my portfolio — a glimpse into my journey as a Computer Engineering student. Here, I share the pieces I’m exploring, the skills I’m building, and the progress I’m making along the way.</p>
             </div>
             <div class="home-img">
                 <img src="profile.jpg" alt="Jillian Gail">
@@ -33,10 +39,13 @@
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+       <h2>
+        <span class="white-initial">About</span>
+        <span class="gradient-initial"> Me</span>
+       </h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I’m Jillian Gail Z. Pose, a 2nd-year Computer Engineering student at Batangas State University – Lipa Campus. I’m still exploring the field, but I’m genuinely eager to learn more — from hardware fundamentals to software development. My academic journey allows me to experiment with different areas of computing, while building practical skills in web design, development, and system workflows. I aim to grow step by step, gaining both technical knowledge and hands-on experience that will prepare me for future projects and opportunities.</p>
+                <p>I’m <span class="name-highlight">Jillian Gail Z. Pose</span>, a 2nd-year Computer Engineering student at Batangas State University – Lipa Campus. I’m still exploring the field, but I’m genuinely eager to learn more — from hardware fundamentals to software development. My academic journey allows me to experiment with different areas of computing, while building practical skills in web design, development, and system workflows. I aim to grow step by step, gaining both technical knowledge and hands-on experience that will prepare me for future projects and opportunities.</p>
             </div>
             <div class="about-img">
                 <img src="profile.jpg" alt="Jillian Gail">
@@ -45,7 +54,10 @@
     </section>
 
     <section id="projects">
-        <h2>My Project</h2>
+        <h2>
+        <span class="white-initial">My</span>
+        <span class="gradient-initial">Projects</span>
+       </h2>
         <div class="projects-grid">
 
             <div class="project-card">
@@ -70,7 +82,10 @@
     </section>
 
     <section id="contacts">
-        <h2>Get in Touch</h2>
+        <h2>
+        <span class="white-initial">Get in </span>
+        <span class="gradient-initial"> Touch</span>
+       </h2>
         <div class="contact-content">
             <h3>Let's connect and collaborate!</h3>
             <div class="contact-info">
@@ -93,31 +108,6 @@
 
     <footer>
         <p>© 2025 Jillian Gail Pose - My Journey. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.getElementById('home').style.display = 'block';
-
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('section');
-            pages.forEach(page => {
-                page.style.display = 'none';
-            });
-
-            document.getElementById(pageId).style.display = 'block';
-
-            // Move active class to the clicked nav tab
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => link.classList.remove('active'));
-            // Find the nav link that matches the pageId
-            navLinks.forEach(link => {
-                // Extract the argument from onclick="showPage('...')"
-                const onclickAttr = link.getAttribute('onclick');
-                if (onclickAttr && onclickAttr.includes(`showPage('${pageId}')`)) {
-                    link.classList.add('active');
-                }
-            });
-        }
     </script>
 
 </body>
